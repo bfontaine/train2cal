@@ -203,7 +203,7 @@ defmodule Train2cal do
                conditions -> HtmlEntities.decode(conditions)
              end
            ]
-           |> Enum.reject(fn x -> is_nil(x) end)
+           |> Enum.reject(&is_nil/1)
            |> Enum.join("\n")
          end
        )
@@ -222,7 +222,7 @@ defmodule Train2cal do
                name: passenger["displayName"],
                cards: ["commercialCard", "fidelityCard"]
                       |> Enum.map(fn key -> passenger[key] end)
-                      |> Enum.reject(fn x -> is_nil(x) end)
+                      |> Enum.reject(&is_nil/1)
                       |> Enum.map(fn card -> card["label"] end)
                       |> Enum.join(" ; ")
              }
