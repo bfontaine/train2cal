@@ -5,8 +5,6 @@
 This used to be a feature provided by [Capitaine Train][ct]. Unfortunately Trainline killed it and recently re-released
 it in a very basic way. Oui.SNCF has a more detailed iCalendar export feature, but not as good as Capitaine Train’s.
 
-![](./demo.png)
-
 Note I learned Elixir and Vue while coding this.
 
 [ct]: https://en.wikipedia.org/wiki/Trainline_EU
@@ -14,12 +12,14 @@ Note I learned Elixir and Vue while coding this.
 ## Development
 
 Setup:
+
 ```
 mix deps.get
 cd assets ; npm install ; cd ..
 ```
 
 Start the server:
+
 ```
 mix phx.server
 ```
@@ -29,6 +29,10 @@ mix phx.server
 See [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 Note Oui.SNCF appears to block IPs from known hosting providers, so the app may not work.
+
+## Demo
+
+![](./demo.png)
 
 ## Privacy Warning
 
